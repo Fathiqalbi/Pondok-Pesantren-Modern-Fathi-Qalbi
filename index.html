@@ -5,14 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pondok Pesantren Modern Fathi Qalbi</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-800">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script><div data-aos="fade-up"></div>
+<style>
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 1s ease-out forwards;
+  }
+</style>
   <!-- HEADER -->
   <header class="bg-white shadow sticky top-0 z-50">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <!-- Logo dan Judul -->
       <div class="flex items-center space-x-4">
-        <img src="logo fq.jpg" alt="Logo Modern Fathi Qalbi" class="h-12 w-auto rounded-full shadow" />
+        <img src="logo fq.jpg" alt="Logo Modern Fathi Qalbi" class="h-12 w-auto rounded" />
         <h1 class="text-2xl font-bold text-green-700">Pondok Pesantren Modern Fathi Qalbi</h1>
       </div>
       <!-- Navigasi -->
@@ -67,9 +88,25 @@
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-6">Galeri Kegiatan</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-        <img src="https://source.unsplash.com/400x300/?islamic,school" class="rounded-lg shadow" alt="Kegiatan 1">
-        <img src="https://source.unsplash.com/400x300/?quran,students" class="rounded-lg shadow" alt="Kegiatan 2">
-        <img src="https://source.unsplash.com/400x300/?mosque,class" class="rounded-lg shadow" alt="Kegiatan 3">
+        <img src="aula 2.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-lg shadow animate-slide-in-left" /> 
+        <img src="aula.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-lg shadow animate-slide-in-left" /> 
+        <img src="gontor 2.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-lg shadow animate-slide-in-left" /> 
+        <img src="Gontor 3.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" /> 
+        <img src="Gontor.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" /> 
+        <img src="belajar 1.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="belajar 2.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="belajar 4.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="belajar.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="pramuka 1.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="pramuka 2.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="pramuka 3.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="pramuka 4.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="pramuka.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="pondok.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="sekolah.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="KA .jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="wisuda 2.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
+        <img src="wisuda.jpg" alt="Logo Modern Fathi Qalbi" class="w-64 h-auto rounded-xl shadow" />
       </div>
     </div>
   </section>
@@ -85,12 +122,14 @@
           <option value="">Jenis Kelamin</option>
           <option value="Laki-laki">Laki-laki</option>
           <option value="Perempuan">Perempuan</option>
+        </select>
         <input type="text" name="asal_sekolah" placeholder="Asal Sekolah" class="w-full p-3 border rounded-lg" required />
         <input type="tel" name="nomor_wa" placeholder="Nomor WhatsApp" class="w-full p-3 border rounded-lg" required />
         <select name="Pilihan Jenjang" class="w-full p-3 border rounded-lg" required>
           <option value="">Pilihan Jenjang</option>
           <option value="SMP">SMP</option>
           <option value="SMA">SMA</option>
+        </select>
         <button type="submit" class="bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-800 transition">Kirim Pendaftaran</button>
       </form>
     </div>
