@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pondok Pesantren Al-Hikmah</title>
+  <title>Pondok Pesantren Modern Fathi Qalbi</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -12,8 +12,8 @@
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
       <!-- Logo dan Judul -->
       <div class="flex items-center space-x-4">
-        <img src="logo fq.jpg" alt="Logo Al-Hikmah" class="h-12 w-auto rounded-full shadow" />
-        <h1 class="text-2xl font-bold text-green-700">Pondok Pesantren Al-Hikmah</h1>
+        <img src="logo fq.jpg" alt="Logo Modern Fathi Qalbi" class="h-12 w-auto rounded-full shadow" />
+        <h1 class="text-2xl font-bold text-green-700">Pondok Pesantren Modern Fathi Qalbi</h1>
       </div>
       <!-- Navigasi -->
       <nav class="space-x-4">
@@ -28,15 +28,16 @@
 
   <!-- BERANDA -->
   <section id="beranda" class="bg-green-700 text-white text-center py-20">
-    <h2 class="text-4xl font-bold mb-4">Selamat Datang di Pondok Pesantren Al-Hikmah</h2>
-    <p class="text-lg">Tempat mencetak generasi Qur'ani dan berakhlak mulia</p>
+    <h2 class="text-4xl font-bold mb-4">Selamat Datang di Pondok Pesantren Modern Fathi Qalbi</h2>
+    <p class="text-lg">Tempat mewujudkan generasi yang baik, benar, mencintai keindahan, bermanfaat bagi ummatserta makmur dan memakmurkan</p>
   </section>
 
   <!-- TENTANG -->
   <section id="tentang" class="py-16 bg-white">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-6">Tentang Kami</h2>
-      <p class="max-w-2xl mx-auto">Pondok Pesantren Al-Hikmah berdiri sejak tahun 2001, dengan visi mencetak santri yang berilmu, beramal, dan bertakwa. Kami mengedepankan pendidikan Al-Qur’an, ilmu agama, dan keterampilan hidup yang islami.</p>
+      <p class="max-w-2xl mx-auto">Pondok Pesantren Modern Fathi Qalbi berdiri sejak tahun 2018, dengan visi mencetak pribadi muslim dan muslimah yang kaffah, istiqomah, ikhlas, bertafaqquh untuk berjuang dalam agama, tangguh, berakhlak mulia, terampil dan mampu menghadapi tantangan global
+        .</p>
     </div>
   </section>
 
@@ -47,15 +48,15 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
         <div class="bg-white p-6 rounded-xl shadow">
           <h3 class="text-xl font-semibold mb-2">Tahfidzul Qur'an</h3>
-          <p>Program unggulan untuk menghafal Al-Qur’an dengan bimbingan ustadz/ustadzah berpengalaman.</p>
+          <p>Program unggulan untuk menghafal Al-Qur’an .</p>
         </div>
         <div class="bg-white p-6 rounded-xl shadow">
           <h3 class="text-xl font-semibold mb-2">Madrasah Diniyah</h3>
-          <p>Pembelajaran ilmu fiqih, akidah, nahwu-shorof, dan kitab-kitab klasik.</p>
+          <p>Pembelajaran ilmu fiqih, akidah, nahwu-shorof, dan kitab-kitab Kulliyatul Mu'alamiyyatul Islamiyyah.</p>
         </div>
         <div class="bg-white p-6 rounded-xl shadow">
           <h3 class="text-xl font-semibold mb-2">Ekstrakurikuler</h3>
-          <p>Seperti kaligrafi, komputer, bahasa Arab dan Inggris, serta olahraga.</p>
+          <p>Seperti kaligrafi, Otomotif, Multimedia, Silat, Public Speaking, komputer, bahasa Arab dan Inggris, serta olahraga.</p>
         </div>
       </div>
     </div>
@@ -73,11 +74,33 @@
     </div>
   </section>
 
+   <!-- Formulir Pendaftaran -->
+   <section class="bg-blue-100 py-16 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Formulir Pendaftaran</h2>
+      <form action="https://formspree.io/f/moqgkqvw" method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
+        <input type="text" name="nama" placeholder="Nama Lengkap" class="w-full p-3 border rounded-lg" required />
+        <input type="date" name="tgl_lahir" placeholder="Tanggal Lahir" class="w-full p-3 border rounded-lg" required />
+        <select name="jenis_kelamin" class="w-full p-3 border rounded-lg" required>
+          <option value="">Jenis Kelamin</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+          <option value="">Jenjang</option>
+          <option value="SMP">SMP</option>
+          <option value="SMA">SMA</option>
+        </select>
+        <input type="text" name="asal_sekolah" placeholder="Asal Sekolah" class="w-full p-3 border rounded-lg" required />
+        <input type="tel" name="nomor_wa" placeholder="Nomor WhatsApp" class="w-full p-3 border rounded-lg" required />
+        <button type="submit" class="bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-800 transition">Kirim Pendaftaran</button>
+      </form>
+    </div>
+  </section>
+
   <!-- KONTAK -->
   <section id="kontak" class="py-16 bg-gray-100">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-6">Kontak Kami</h2>
-      <p class="mb-4">Alamat: Jl. Pesantren No. 123, Kota Islami, Indonesia</p>
+      <p class="mb-4">Alamat: Kp. Harapan Desa Muara Kecamatan Wansalam Lebak Banten, Indonesia</p>
       <p class="mb-4">Telepon: 0812-3456-7890</p>
       <p class="mb-4">Email: info@alhikmah.sch.id</p>
       <iframe class="mx-auto mt-6 rounded-xl shadow" width="100%" height="300" src="https://maps.google.com/maps?q=pesantren&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
@@ -86,7 +109,7 @@
 
   <!-- FOOTER -->
   <footer class="bg-green-700 text-white text-center py-6">
-    <p>&copy; 2025 Pondok Pesantren Al-Hikmah. All rights reserved.</p>
+    <p>&copy; 2025 Pondok Pesantren Modern Fathi Qalbi. All rights reserved.</p>
   </footer>
 </body>
 </html>
