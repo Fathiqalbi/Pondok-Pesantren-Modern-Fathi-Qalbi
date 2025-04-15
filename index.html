@@ -111,29 +111,113 @@
     </div>
   </section>
 
-   <!-- Formulir Pendaftaran -->
-   <section class="bg-blue-100 py-16 px-6">
+  <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pondok Pesantren Modern Fathi Qalbi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <style>
+    @keyframes slide-in-left {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    .animate-slide-in-left {
+      animation: slide-in-left 1s ease-out forwards;
+    }
+  </style>
+
+  <!-- Formulir Pendaftaran -->
+  <section class="bg-blue-100 py-16 px-6">
     <div class="max-w-2xl mx-auto">
       <h2 class="text-3xl font-bold mb-6 text-center">Formulir Pendaftaran</h2>
-      <form action="https://formspree.io/f/moqgkqvw" method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
-        <input type="text" name="nama" placeholder="Nama Lengkap" class="w-full p-3 border rounded-lg" required />
-        <input type="date" name="tgl_lahir" placeholder="Tanggal Lahir" class="w-full p-3 border rounded-lg" required />
-        <select name="jenis_kelamin" class="w-full p-3 border rounded-lg" required>
-          <option value="">Jenis Kelamin</option>
-          <option value="Laki-laki">Laki-laki</option>
-          <option value="Perempuan">Perempuan</option>
-        </select>
-        <input type="text" name="asal_sekolah" placeholder="Asal Sekolah" class="w-full p-3 border rounded-lg" required />
-        <input type="tel" name="nomor_wa" placeholder="Nomor WhatsApp" class="w-full p-3 border rounded-lg" required />
-        <select name="Pilihan Jenjang" class="w-full p-3 border rounded-lg" required>
-          <option value="">Pilihan Jenjang</option>
-          <option value="SMP">SMP</option>
-          <option value="SMA">SMA</option>
-        </select>
-        <button type="submit" class="bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-800 transition">Kirim Pendaftaran</button>
+      <form id="formPendaftaran" action="https://formspree.io/f/moqgkqvw" method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
+
+        <label class="block">
+          <span class="text-gray-700">Nama Lengkap</span>
+          <input type="text" name="nama" placeholder="Nama Lengkap" class="w-full p-3 border rounded-lg" required autocomplete="name" />
+        </label>
+
+        <label class="block">
+          <span class="text-gray-700">Tanggal Lahir</span>
+          <input type="date" name="tgl_lahir" class="w-full p-3 border rounded-lg" required autocomplete="bday" />
+        </label>
+
+        <label class="block">
+          <span class="text-gray-700">Jenis Kelamin</span>
+          <select name="jenis_kelamin" class="w-full p-3 border rounded-lg" required>
+            <option value="">Pilih Jenis Kelamin</option>
+            <option value="Laki-laki">Laki-laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
+        </label>
+
+        <label class="block">
+          <span class="text-gray-700">Asal Sekolah</span>
+          <input type="text" name="asal_sekolah" placeholder="Asal Sekolah" class="w-full p-3 border rounded-lg" required />
+        </label>
+
+        <label class="block">
+          <span class="text-gray-700">Nomor WhatsApp</span>
+          <input type="tel" name="nomor_wa" placeholder="08xxxxxxxxxx" pattern="08[0-9]{8,11}" class="w-full p-3 border rounded-lg" required autocomplete="tel" />
+        </label>
+
+        <label class="block">
+          <span class="text-gray-700">Pilihan Jenjang</span>
+          <select name="pilihan_jenjang" class="w-full p-3 border rounded-lg" required>
+            <option value="">Pilih Jenjang</option>
+            <option value="SMP">SMP</option>
+            <option value="SMA">SMA</option>
+          </select>
+        </label>
+
+        <button type="submit" class="bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-800 transition">
+          Kirim Pendaftaran
+        </button>
+        <div id="alert" class="hidden text-center font-semibold mt-4"></div>
       </form>
     </div>
   </section>
+
+  <script>
+    const form = document.getElementById("formPendaftaran");
+    const alertBox = document.getElementById("alert");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        alertBox.textContent = "Pendaftaran berhasil dikirim. Terima kasih!";
+        alertBox.className = "text-green-700 text-center font-semibold mt-4";
+        form.reset();
+      } else {
+        alertBox.textContent = "Terjadi kesalahan saat mengirim. Coba lagi ya.";
+        alertBox.className = "text-red-700 text-center font-semibold mt-4";
+      }
+    });
+  </script>
+</body>
+</html>
 
   <!-- KONTAK -->
   <section id="kontak" class="py-16 bg-gray-100">
