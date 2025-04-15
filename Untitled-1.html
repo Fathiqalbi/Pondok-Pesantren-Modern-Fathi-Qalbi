@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pondok Pesantren Modern Fathi Qalbi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="bg-blue-700 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Pondok Pesantren Modern Fathi Qalbi</h1>
+      <p class="text-xl">Mencetak generasi Qur'ani yang berakhlakul karimah</p>
+    </div>
+  </section>
+
+  <!-- Tentang Kami -->
+  <section class="py-16 px-6 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Tentang Kami</h2>
+    <p class="text-lg text-center max-w-3xl mx-auto">Pondok Pesantren Modern Fathi Qalbi adalah lembaga pendidikan Islam yang menggabungkan kurikulum modern dan tradisional untuk membentuk santri yang cerdas, berakhlak, dan berdaya saing global.</p>
+  </section>
+
+  <!-- Program Unggulan -->
+  <section class="bg-gray-100 py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-10 text-center">Program Unggulan</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold text-xl mb-2">Tahfidz Al-Qur'an</h3>
+          <p>Program unggulan untuk menghafal Al-Qur'an dengan metode yang terstruktur dan efektif.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold text-xl mb-2">Bahasa Arab & Inggris</h3>
+          <p>Penguatan bahasa asing sebagai bekal menghadapi era globalisasi dan dakwah internasional.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <h3 class="font-semibold text-xl mb-2">Karakter & Kepemimpinan</h3>
+          <p>Pembinaan karakter dan kepemimpinan sejak dini untuk membentuk pribadi yang tangguh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri -->
+  <section class="py-16 px-6 max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Galeri Kegiatan</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="https://via.placeholder.com/300x200" alt="Galeri 1" class="rounded-lg">
+      <img src="https://via.placeholder.com/300x200" alt="Galeri 2" class="rounded-lg">
+      <img src="https://via.placeholder.com/300x200" alt="Galeri 3" class="rounded-lg">
+    </div>
+  </section>
+
+  <!-- Formulir Pendaftaran -->
+  <section class="bg-blue-100 py-16 px-6">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Formulir Pendaftaran</h2>
+      <form action="https://formspree.io/f/moqgkqvw" method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
+        <input type="text" name="nama" placeholder="Nama Lengkap" class="w-full p-3 border rounded-lg" required />
+        <input type="date" name="tgl_lahir" placeholder="Tanggal Lahir" class="w-full p-3 border rounded-lg" required />
+        <select name="jenis_kelamin" class="w-full p-3 border rounded-lg" required>
+          <option value="">Jenis Kelamin</option>
+          <option value="Laki-laki">Laki-laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
+        <input type="text" name="asal_sekolah" placeholder="Asal Sekolah" class="w-full p-3 border rounded-lg" required />
+        <input type="tel" name="nomor_wa" placeholder="Nomor WhatsApp" class="w-full p-3 border rounded-lg" required />
+        <button type="submit" class="bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-800 transition">Kirim Pendaftaran</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Kontak Kami -->
+  <section class="bg-blue-100 py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Kontak Kami</h2>
+      <p class="mb-4">Alamat: Kp. Harapan Desa Muara Kecamatan Wanasalam Lebak Banten</p>
+      <p class="mb-4">Email: info@fathiqalbi.sch.id | Telp: 085819160604</p>
+      <iframe class="mx-auto rounded-lg" src="https://maps.google.com/maps?q=pondok%20pesantren&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="300" frameborder="0" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white py-6 text-center">
+    <p>&copy; 2025 Pondok Pesantren Modern Fathi Qalbi. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
