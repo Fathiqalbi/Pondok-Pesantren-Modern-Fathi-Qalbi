@@ -143,13 +143,18 @@
   <section class="bg-blue-100 py-16 px-6">
     <div class="max-w-2xl mx-auto">
       <h2 class="text-3xl font-bold mb-6 text-center">Formulir Pendaftaran</h2>
-      <form id="formPendaftaran" action="https://script.google.com/macros/s/AKfycbwGpmSFcUhtLVn5ScZs8I9ps48qb4jz7OvtDMNYOiTkafnnH9GPMM0cdEM4eSBS2wKX/exec" method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
+      <form id="formPendaftaran" action="https://script.google.com/macros/s/AKfycbxMjAabKgbQCZY4biQjnIyC-T2iV2X6xYkd6YVN9VGbfvujDcZsEBKd1iMnqbGLY1gJ2Q/exec" method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
 
         <label class="block">
           <span class="text-gray-700">Nama Lengkap</span>
           <input type="text" name="nama" placeholder="Nama Lengkap" class="w-full p-3 border rounded-lg" required autocomplete="name" />
         </label>
 
+        <label class="block">
+          <span class="text-gray-700">Email</span>
+          <input type="email" name="email" placeholder="email@example.com" class="w-full p-3 border rounded-lg" required />
+        </label>
+        
         <label class="block">
           <span class="text-gray-700">Tanggal Lahir</span>
           <input type="date" name="tgl_lahir" class="w-full p-3 border rounded-lg" required autocomplete="bday" />
@@ -196,18 +201,15 @@
     const alertBox = document.getElementById("alert");
 
     form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const jsonData = Object.fromEntries(formData);
+    e.preventDefault();
+    const formData = new FormData(form);
 
       try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: JSON.stringify(jsonData),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData // langsung kirim FormData
+        // tidak perlu pakai headers
+      });
 
         if (response.ok) {
           alertBox.textContent = "Pendaftaran berhasil dikirim dan disimpan ke Google Sheets. Terima kasih!";
