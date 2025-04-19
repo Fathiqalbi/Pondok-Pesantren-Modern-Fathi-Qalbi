@@ -3,215 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pondok Pesantren Modern Fathi Qalbi</title>
+  <title>Fathi Qalbi | Pesantren Modern</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 text-gray-800">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script><div data-aos="fade-up"></div>
-<style>
-  @keyframes slide-in-left {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
+  <script>
+    window.addEventListener('DOMContentLoaded', () => AOS.init());
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
     }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }.animate-slide-in-left {
-    animation: slide-in-left 1s ease-out forwards;
-  }
-</style>
-<header class="bg-white shadow sticky top-0 z-50" data-aos="fade-down">
-  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-    <!-- Logo dan Judul -->
-    <div class="flex items-center space-x-4">
-      <img src="logo fq.jpg" alt="Logo" class="h-12 w-auto rounded" />
-      <h1 class="text-xl md:text-2xl font-bold text-green-700">Pondok Pesantren Modern Fathi Qalbi</h1>
-    </div>
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
 
-    <!-- Navigasi Desktop -->
-    <nav class="hidden md:flex space-x-4">
-      <a href="#beranda" class="text-gray-700 hover:text-green-600">Beranda</a>
-      <a href="#tentang" class="text-gray-700 hover:text-green-600">Tentang</a>
-      <a href="#program" class="text-gray-700 hover:text-green-600">Program</a>
-      <a href="#daftar" class="text-gray-700 hover:text-green-600">Daftar</a>
-      <a href="#galeri" class="text-gray-700 hover:text-green-600">Galeri</a>
-      <a href="#kontak" class="text-gray-700 hover:text-green-600">Kontak</a>
-    </nav>
-
-    <!-- Menu Mobile -->
-    <div class="md:hidden">
-      <button id="menuToggle" class="text-gray-700 focus:outline-none text-2xl">☰</button>
-    </div>
-  </div>
-
-  <!-- Menu Mobile Hidden -->
-  <div id="mobileMenu" class="hidden px-4 pb-4 md:hidden">
-    <a href="#beranda" class="block py-1 text-gray-700 hover:text-green-600">Beranda</a>
-    <a href="#tentang" class="block py-1 text-gray-700 hover:text-green-600">Tentang</a>
-    <a href="#program" class="block py-1 text-gray-700 hover:text-green-600">Program</a>
-    <a href="#daftar" class="block py-1 text-gray-700 hover:text-green-600">Daftar</a>
-    <a href="#galeri" class="block py-1 text-gray-700 hover:text-green-600">Galeri</a>
-    <a href="#kontak" class="block py-1 text-gray-700 hover:text-green-600">Kontak</a>
-  </div>
-</header>
-
-<script>
-  const toggleBtn = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-  });
-</script>
-
-
-  <!-- BERANDA -->
-  
-  <section id="beranda" class="relative h-screen bg-cover bg-center bg-no-repeat text-white" style="background-image: url('sekolah.jpg');">
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="relative z-10 flex items-center justify-center h-full">
-      <div class="text-center px-4">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out">
-          SELAMAT DATANG DI PONDOK PESANTREN MODERN FATHI QALBI
-        </h1>
-        <p class="text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300" data-aos-easing="ease-in-out">
-          Tempat mewujudkan generasi yang baik, benar, mencintai keindahan, bermanfaat bagi ummat serta makmur dan memakmurkan
-        </p>
-        <a href="#daftar" class="inline-block mt-8 px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition" data-aos="zoom-in" data-aos-delay="700">
-          Daftar Sekarang
-        </a>
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow backdrop-blur bg-opacity-80">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 py-4">
+      <div class="flex items-center gap-3">
+        <img src="logo fq.jpg" alt="Logo" class="h-10 rounded" />
+        <span class="text-lg font-semibold text-green-700">PONDOK PESANTREN MODERN FATHI QALBI</span>
       </div>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#beranda" class="hover:text-green-600">Beranda</a>
+        <a href="#tentang" class="hover:text-green-600">Tentang</a>
+        <a href="#program" class="hover:text-green-600">Program</a>
+        <a href="#galeri" class="hover:text-green-600">Galeri</a>
+        <a href="#kontak" class="hover:text-green-600">Kontak</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuBtn" class="text-2xl">☰</button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+      <a href="#beranda" class="block py-2">Beranda</a>
+      <a href="#tentang" class="block py-2">Tentang</a>
+      <a href="#program" class="block py-2">Program</a>
+      <a href="#galeri" class="block py-2">Galeri</a>
+      <a href="#kontak" class="block py-2">Kontak</a>
+    </div>
+  </header>
+
+  <script>
+    document.getElementById("menuBtn").onclick = () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    };
+  </script>
+
+  <!-- Hero Section -->
+  <section id="beranda" class="h-screen bg-[url('sekolah.jpg')] bg-cover bg-center relative flex items-center justify-center">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 text-center text-white px-4 md:px-6">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4" data-aos="fade-down">Selamat Datang</h1>
+      <p class="text-base md:text-xl max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+        Pondok Pesantren Modern Fathi Qalbi – mencetak generasi islami, unggul, dan berakhlak mulia.
+      </p>
+      <a href="#daftar" class="mt-6 inline-block px-5 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition" data-aos="zoom-in" data-aos-delay="500">
+        Daftar Sekarang
+      </a>
     </div>
   </section>
 
-
-  <!-- TENTANG -->
-  <section id="tentang" class="py-16 bg-green-50">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8" data-aos="fade-down" data-aos-duration="1000">Tentang Kami</h2>
-      <p class="text-gray-700 max-w-3xl mx-auto text-lg" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+  <!-- Tentang Kami -->
+  <section id="tentang" class="py-20 bg-white px-4 md:px-0">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-700 mb-6" data-aos="fade-up">Tentang Kami</h2>
+      <p class="text-gray-700 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
         Pondok Pesantren Modern Fathi Qalbi berdiri sejak tahun 2018, dengan visi mencetak pribadi muslim dan muslimah yang <strong>kaffah</strong>, <strong>istiqomah</strong>, <strong>ikhlas</strong>, bertafaqquh untuk berjuang dalam agama, tangguh, berakhlak mulia, terampil, dan mampu menghadapi tantangan global.
       </p>
     </div>
   </section>
 
-  <!-- PROGRAM -->
-  <section id="program" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Program Pendidikan</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-        
-        <!-- Tahfidz -->
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
-          <div class="text-green-600 text-4xl mb-4">📖</div>
+  <!-- Program Pendidikan -->
+  <section id="program" class="py-20 bg-gray-100 px-4 md:px-0">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-green-700 mb-10" data-aos="fade-up">Program Pendidikan</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow" data-aos="zoom-in">
+          <div class="text-green-600 text-4xl mb-3">📖</div>
           <h3 class="text-xl font-semibold mb-2">Tahfidzul Qur’an</h3>
-          <p class="text-gray-700">Program unggulan menghafal Al-Qur’an 30 juz dengan bimbingan intensif.</p>
+          <p>Program unggulan menghafal Al-Qur’an 30 juz dengan bimbingan intensif.</p>
         </div>
-  
-        <!-- Jenjang Sekolah -->
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
-          <div class="text-green-600 text-4xl mb-4">🏫</div>
-          <h3 class="text-xl font-semibold mb-2">Jenjang Sekolah SD SMP SMA</h3>
-          <p class="text-gray-700">Kurikulum umum & KMI: Fiqih, Aqidah, Nahwu-Shorof, dan kitab-kitab untuk membentuk santri berilmu dan berakhlak.</p>
+        <div class="bg-white p-6 rounded-xl shadow" data-aos="zoom-in" data-aos-delay="200">
+          <div class="text-green-600 text-4xl mb-3">🏫</div>
+          <h3 class="text-xl font-semibold mb-2">Jenjang SD-SMP-SMA</h3>
+          <p>Kurikulum umum & KMI (Kulliyatul Mu'allimin Al-Islaamiyyah): Fiqih, Aqidah, Nahwu-Shorof, dan kitab-kitab untuk membentuk santri berilmu dan berakhlak.</p>
         </div>
-  
-        <!-- Ekstrakurikuler -->
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="300">
-          <div class="text-green-600 text-4xl mb-4">🎨</div>
+        <div class="bg-white p-6 rounded-xl shadow" data-aos="zoom-in" data-aos-delay="400">
+          <div class="text-green-600 text-4xl mb-3">🎨</div>
           <h3 class="text-xl font-semibold mb-2">Ekstrakurikuler</h3>
-          <p class="text-gray-700">kaligrafi, Otomotif, Multimedia, Silat, Public Speaking, komputer, bahasa Arab dan Inggris, serta olahraga.</p>
+          <p>kaligrafi, Otomotif, Multimedia, Silat, Public Speaking, komputer, bahasa Arab dan Inggris, serta olahraga Futsal, Badminton, Bola Volly.</p>
         </div>
-  
       </div>
     </div>
   </section>
-
  
-  <!-- GALERI -->
-<section id="galeri" class="py-16 bg-white">
-  <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-6">Galeri Kegiatan</h2>
-
-    <!-- Menu Tab -->
-    <div class="mb-6 flex justify-center flex-wrap gap-4">
-      <button onclick="showGallery('semua')" class="tab-btn bg-green-600 text-white px-4 py-2 rounded">Semua</button>
-      <button onclick="showGallery('tahfidz')" class="tab-btn bg-gray-200 px-4 py-2 rounded">Tahfidz</button>
-      <button onclick="showGallery('pramuka')" class="tab-btn bg-gray-200 px-4 py-2 rounded">Pramuka</button>
-      <button onclick="showGallery('belajar')" class="tab-btn bg-gray-200 px-4 py-2 rounded">Belajar</button>
-      <button onclick="showGallery('wisuda')" class="tab-btn bg-gray-200 px-4 py-2 rounded">Wisuda</button>
+   <!-- GALERI KEGIATAN -->
+   <section id="galeri" class="py-20 bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-green-700 mb-2" data-aos="fade-up">Galeri Kegiatan</h2>
+      <p class="text-gray-600 mb-8 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Dokumentasi berbagai kegiatan santri Pondok Pesantren Modern Fathi Qalbi.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 mb-10" data-aos="fade-up" data-aos-delay="200">
+        <button onclick="showGallery('semua')" class="tab-btn bg-green-600 text-white px-4 py-2 rounded-lg font-semibold transition">Semua</button>
+        <button onclick="showGallery('tahfidz')" class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold transition hover:bg-green-600 hover:text-white">Tahfidz</button>
+        <button onclick="showGallery('pramuka')" class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold transition hover:bg-green-600 hover:text-white">Pramuka</button>
+        <button onclick="showGallery('belajar')" class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold transition hover:bg-green-600 hover:text-white">Belajar</button>
+        <button onclick="showGallery('wisuda')" class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold transition hover:bg-green-600 hover:text-white">Wisuda</button>
+        <button onclick="showGallery('futsal')" class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold transition hover:bg-green-600 hover:text-white">Futsal</button>
+        <button onclick="showGallery('otomotif')" class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold transition hover:bg-green-600 hover:text-white">Otomotif</button>
+        <button onclick="showGallery('sepak')" class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold transition hover:bg-green-600 hover:text-white">Sepak Bola</button>
+        <button onclick="showGallery('video')" class="tab-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-semibold transition hover:bg-green-600 hover:text-white">Video</button>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="gallery-img tahfidz overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <img src="aula 2.jpg" alt="tahfidz" class="w-full h-60 object-cover cursor-pointer" onclick="openLightbox(this.src)" />
+          <div class="p-2 text-sm text-gray-600">Kegiatan Tahfidz di Aula</div>
+        </div>
+        <div class="gallery-img pramuka overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <img src="pramuka 1.jpg" alt="pramuka" class="w-full h-60 object-cover cursor-pointer" onclick="openLightbox(this.src)" />
+          <div class="p-2 text-sm text-gray-600">Latihan Pramuka Santri</div>
+        </div>
+        <div class="gallery-img belajar overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <img src="belajar.jpg" alt="belajar" class="w-full h-60 object-cover cursor-pointer" onclick="openLightbox(this.src)" />
+          <div class="p-2 text-sm text-gray-600">Suasana Belajar di Kelas</div>
+        </div>
+        <div class="gallery-img wisuda overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <img src="wisuda.jpg" alt="wisuda" class="w-full h-60 object-cover cursor-pointer" onclick="openLightbox(this.src)" />
+          <div class="p-2 text-sm text-gray-600">Wisuda Santri Tahfidz</div>
+        </div>
+        <div class="gallery-img futsal overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <img src="futsal.jpg" alt="futsal" class="w-full h-60 object-cover cursor-pointer" onclick="openLightbox(this.src)" />
+          <div class="p-2 text-sm text-gray-600">Ekstrakurikuler Futsal</div>
+        </div>
+        <div class="gallery-img otomotif overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <img src="otomotif.jpg" alt="otomotif" class="w-full h-60 object-cover cursor-pointer" onclick="openLightbox(this.src)" />
+          <div class="p-2 text-sm text-gray-600">Praktik Otomotif</div>
+        </div>
+        <div class="gallery-img sepak overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <img src="sepakbola 1.jpg" alt="sepak" class="w-full h-60 object-cover cursor-pointer" onclick="openLightbox(this.src)" />
+          <div class="p-2 text-sm text-gray-600">Latihan Sepak Bola</div>
+        </div>
+        <div class="gallery-img sepak overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <img src="sepakbola 2.jpg" alt="sepak" class="w-full h-60 object-cover cursor-pointer" onclick="openLightbox(this.src)" />
+          <div class="p-2 text-sm text-gray-600">Latihan Sepak Bola</div>
+        </div>
+        <div class="gallery-img sepak overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <img src="sepakbola 3.jpg" alt="sepak" class="w-full h-60 object-cover cursor-pointer" onclick="openLightbox(this.src)" />
+          <div class="p-2 text-sm text-gray-600">Latihan Sepak Bola</div>
+        </div>
+        <div class="gallery-img video overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <iframe class="w-full h-60" src="https://www.youtube.com/embed/VIDEO_ID" title="Video Kegiatan" frameborder="0" allowfullscreen></iframe>
+          <div class="p-2 text-sm text-gray-600">Video Kegiatan Santri</div>
+        </div>
+        <div class="gallery-img video overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <video class="w-full h-60 object-cover" controls>
+            <source src="vidio fq.mp4" type="video/mp4">
+          </video>
+          <div class="p-2 text-sm text-gray-600">Video Dokumentasi Lokal</div>
+        </div>
+        <div class="gallery-img video overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition">
+          <video class="w-full h-60 object-cover" controls>
+            <source src="sepak bola vidio.mp4" type="video/mp4">
+          </video>
+          <div class="p-2 text-sm text-gray-600">Video Latihan Sepak Bola</div>
+        </div>
+      </div>
     </div>
-
-    <!-- Galeri Gambar -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-      <img src="aula 2.jpg" class="gallery-img tahfidz w-64 h-auto rounded shadow cursor-pointer cursor-pointer" onclick="openLightbox(this.src)" onclick="openLightbox(this.src)" />
-      <img src="Gontor.jpg" class="gallery-img tahfidz w-64 h-auto rounded shadow cursor-pointer cursor-pointer" onclick="openLightbox(this.src)" onclick="openLightbox(this.src)" />
-      <img src="pramuka 1.jpg" class="gallery-img pramuka w-64 h-auto rounded shadow cursor-pointer cursor-pointer" onclick="openLightbox(this.src)" onclick="openLightbox(this.src)" />
-      <img src="pramuka 2.jpg" class="gallery-img pramuka w-64 h-auto rounded shadow cursor-pointer cursor-pointer" onclick="openLightbox(this.src)" onclick="openLightbox(this.src)" />
-      <img src="belajar.jpg" class="gallery-img belajar w-64 h-auto rounded shadow cursor-pointer cursor-pointer" onclick="openLightbox(this.src)" onclick="openLightbox(this.src)" />
-      <img src="belajar 2.jpg" class="gallery-img belajar w-64 h-auto rounded shadow cursor-pointer cursor-pointer" onclick="openLightbox(this.src)" onclick="openLightbox(this.src)" />
-      <img src="wisuda.jpg" class="gallery-img wisuda w-64 h-auto rounded shadow cursor-pointer cursor-pointer" onclick="openLightbox(this.src)" onclick="openLightbox(this.src)" />
-      <img src="wisuda 2.jpg" class="gallery-img wisuda w-64 h-auto rounded shadow cursor-pointer cursor-pointer" onclick="openLightbox(this.src)" onclick="openLightbox(this.src)" />
-    </div>
-  </div>
-</section>
-
-<script>
-  function showGallery(category) {
-    const images = document.querySelectorAll('.gallery-img');
-    images.forEach(img => {
-      if (category === 'semua' || img.classList.contains(category)) {
-        img.style.display = 'block';
-      } else {
-        img.style.display = 'none';
-      }
-    });
-
-    // Update tombol aktif
-    const buttons = document.querySelectorAll('.tab-btn');
-    buttons.forEach(btn => {
-      btn.classList.remove('bg-green-600', 'text-white');
-      if (btn.getAttribute('onclick').includes(`'${category}'`)) {
-        btn.classList.add('bg-green-600', 'text-white');
-      }
-    });
-  }
-
-  window.onload = () => showGallery('semua');
-</script>
-
+  </section>
+  <script>
+    function showGallery(category) {
+      const images = document.querySelectorAll('.gallery-img');
+      images.forEach(img => {
+        img.style.display = (category === 'semua' || img.classList.contains(category)) ? 'block' : 'none';
+      });
   
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pondok Pesantren Modern Fathi Qalbi</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 text-gray-800">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-  <style>
-    @keyframes slide-in-left {
-      from {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      to {
-        transform: translateX(0);
-        opacity: 1;
-      }
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-green-600', 'text-white');
+        btn.classList.add('bg-gray-200', 'text-gray-700');
+  
+        if (btn.textContent.toLowerCase().includes(category)) {
+          btn.classList.add('bg-green-600', 'text-white');
+          btn.classList.remove('bg-gray-200', 'text-gray-700');
+        }
+      });
     }
-    .animate-slide-in-left {
-      animation: slide-in-left 1s ease-out forwards;
-    }
-  </style>
-
+  
+    window.onload = () => showGallery('semua');
+  </script>
+  
   <!-- Formulir Pendaftaran -->
   <section id="daftar" class="bg-blue-100 py-16 px-6">
     <div class="max-w-2xl mx-auto">
